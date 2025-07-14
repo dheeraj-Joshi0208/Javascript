@@ -40,8 +40,6 @@ However, **Java** and **JavaScript** are completely different and not directly r
 
 # JavaScript Variables - Complete Guide
 
-## Introduction
-
 Variables in JavaScript are containers that store data values. They act as named storage locations that can hold different types of data and can be referenced and manipulated throughout your code.
 
 ## Variable Declaration Keywords
