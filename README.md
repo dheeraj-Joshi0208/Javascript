@@ -2,7 +2,7 @@
 
 ## 📄 About JavaScript
 
-JavaScript is a very popular and powerful programming language used to make websites interactive and dynamic. It allows web pages to respond to user actions like clicks, form submissions, animations, or updating content without reloading the whole page.  
+JavaScript is a very popular and powerful programming language used to make websites interactive and dynamic. It allows web pages to respond to user actions like clicks, form submissions, animations, or updating content without reloading the whole page.
 
 Today, JavaScript is not just limited to browsers. It runs on servers (using Node.js), mobile apps, desktop apps, and even smart devices.
 
@@ -10,11 +10,11 @@ Today, JavaScript is not just limited to browsers. It runs on servers (using Nod
 
 ## 🛠️ How was JavaScript made?
 
-JavaScript was created in **1995** by **Brendan Eich**, who was working at Netscape Communications (a company that built one of the first web browsers).  
+JavaScript was created in **1995** by **Brendan Eich**, who was working at Netscape Communications (a company that built one of the first web browsers).
 
-Netscape wanted a lightweight scripting language that could be used easily by designers and beginner programmers to add small features to web pages.  
+Netscape wanted a lightweight scripting language that could be used easily by designers and beginner programmers to add small features to web pages.
 
-Brendan Eich developed the first version of JavaScript in just **10 days**!  
+Brendan Eich developed the first version of JavaScript in just **10 days**!
 
 ---
 
@@ -32,8 +32,56 @@ Brendan Eich developed the first version of JavaScript in just **10 days**!
 
 ## 💬 Why is it called "JavaScript"?
 
-The name **JavaScript** was chosen for marketing reasons. At that time, Java (a different language) was very popular, so Netscape used a similar name to get more attention.  
+The name **JavaScript** was chosen for marketing reasons. At that time, Java (a different language) was very popular, so Netscape used a similar name to get more attention.
 
 However, **Java** and **JavaScript** are completely different and not directly related.
 
 ---
+
+# JavaScript Variables - Complete Guide
+
+## Introduction
+
+Variables in JavaScript are containers that store data values. They act as named storage locations that can hold different types of data and can be referenced and manipulated throughout your code.
+
+## Variable Declaration Keywords
+
+JavaScript provides three keywords for declaring variables:
+
+### `var`
+- **Function-scoped** or **globally-scoped**
+- **Hoisted** to the top of their scope
+- Can be **redeclared** and **updated**
+- **Legacy** keyword (ES5 and earlier)
+
+```javascript
+var name = "John";
+var name = "Jane"; // Redeclaration allowed
+name = "Bob";      // Update allowed
+```
+
+### `let`
+- **Block-scoped**
+- **Hoisted** but not initialized (Temporal Dead Zone)
+- Cannot be **redeclared** in the same scope
+- Can be **updated**
+- **Modern** keyword (ES6+)
+
+```javascript
+let age = 25;
+// let age = 30; // Error: Cannot redeclare
+age = 30;        // Update allowed
+```
+
+### `const`
+- **Block-scoped**
+- **Hoisted** but not initialized (Temporal Dead Zone)
+- Cannot be **redeclared** or **reassigned**
+- Must be **initialized** at declaration
+- **Modern** keyword (ES6+)
+
+```javascript
+const PI = 3.14159;
+// const PI = 3.14; // Error: Cannot redeclare
+// PI = 3.14;       // Error: Cannot reassign
+```
