@@ -111,7 +111,7 @@ Introduced in ES6, `let` provides a more modern and predictable way to declare v
 - **Can be updated:** While you can't redeclare it, you **can update** the value of a `let` variable as many times as you need.
 - **Modern keyword (ES6+):** `let` is the preferred keyword for variables whose values might change.
 
-``` javascript
+```javascript
 let age = 25; // Declare and initialize 'age'
 console.log(age); // Output: 25
 
@@ -122,8 +122,8 @@ age = 30; // Update is allowed
 console.log(age); // Output: 30
 
 if (true) {
-    let city = "New York"; // 'city' is block-scoped to this if block
-    console.log(city); // Output: New York
+  let city = "New York"; // 'city' is block-scoped to this if block
+  console.log(city); // Output: New York
 }
 console.log(city); // Error: city is not defined (outside its block scope)
 
@@ -163,6 +163,131 @@ console.log(user); // Output: { name: 'Alice', age: 31 }
 user = { name: "Bob" }; // This is NOT allowed! (Reassigning the entire object)
 ```
 
+## 🎯 JavaScript Data Types
+
+JavaScript has several built-in data types that define what kind of information can be stored in variables. Understanding these types is crucial for effective programming.
+
+### 🏷️ Primitive Data Types
+
+Primitive data types are the most basic data types in JavaScript. They are immutable (cannot be changed) and stored by value.
+
+#### 🔢 Number
+
+JavaScript uses a single `Number` type for all numeric values, including integers and floating-point numbers.
+
+```javascript
+let age = 25; // Integer
+let price = 19.99; // Floating-point number
+let negative = -42; // Negative number
+let scientific = 2.5e3; // Scientific notation (2500)
+
+// Special numeric values
+let infinity = Infinity;
+let negInfinity = -Infinity;
+let notANumber = NaN; // "Not a Number"
+
+// Checking for special values
+console.log(isNaN(NaN)); // true
+console.log(isFinite(Infinity)); // false
+```
+
+#### 📝 String
+
+Strings represent text data and can be created using single quotes, double quotes, or template literals.
+
+```javascript
+let firstName = "John";
+let lastName = "Doe";
+let message = `Hello, ${firstName} ${lastName}!`; // Template literal
+
+// String properties and methods
+console.log(message.length); // 16
+console.log(message.toUpperCase()); // HELLO, JOHN DOE!
+console.log(message.includes("John")); // true
+console.log(message.slice(0, 5)); // Hello
+```
+
+#### ✅ Boolean
+
+Booleans represent logical values and can only be `true` or `false`.
+
+```javascript
+let isLoggedIn = true;
+let isComplete = false;
+
+// Boolean conversion
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean("hi")); // true
+```
+
+#### 🔤 Symbol
+
+Symbols are unique identifiers, mainly used for object property keys to avoid naming conflicts.
+
+```javascript
+let sym1 = Symbol("description");
+let sym2 = Symbol("description");
+
+console.log(sym1 === sym2); // false (each symbol is unique)
+
+// Using symbols as object keys
+let obj = {
+  [sym1]: "value1",
+  [sym2]: "value2",
+};
+```
+
+#### 🚫 Undefined and Null
+
+- **Undefined**: Represents a variable that has been declared but not assigned a value.
+- **Null**: Represents an intentional absence of any object value.
+
+```javascript
+let undefinedVar;
+console.log(undefinedVar); // undefined
+
+let nullVar = null;
+console.log(nullVar); // null
+
+// Checking types
+console.log(typeof undefinedVar); // "undefined"
+console.log(typeof nullVar); // "object" (this is a known quirk)
+```
+
+### 📦 Non-Primitive Data Types
+
+Non-primitive data types are more complex and stored by reference.
+
+#### 🗂️ Object
+
+Objects are collections of key-value pairs, fundamental to JavaScript programming.
+
+```javascript
+// Object literal syntax
+let person = {
+  name: "Alice",
+  age: 30,
+  city: "New York",
+  greet: function () {
+    return `Hello, I'm ${this.name}`;
+  },
+};
+
+// Accessing properties
+console.log(person.name); // Dot notation
+console.log(person["age"]); // Bracket notation
+
+// Adding/modifying properties
+person.email = "alice@example.com";
+person.age = 31;
+
+// Object methods
+console.log(Object.keys(person)); // ['name', 'age', 'city', 'greet', 'email']
+console.log(Object.values(person)); // Values array
+```
+
 ## 📚 Additional Resources
 
 This guide covers the fundamentals of JavaScript and provides a solid foundation for understanding the language. For more advanced topics and practical examples, consider exploring:
@@ -181,4 +306,4 @@ This guide is provided for educational purposes. Feel free to use and share it t
 
 ---
 
-*Happy coding! 🚀*
+_Happy coding! 🚀_
